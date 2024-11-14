@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <head>
     <link
@@ -11,6 +12,7 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous">
     </script>
+    <link href="styles.css" /> 
   </head>
   <body>
 
@@ -61,7 +63,6 @@
           
                         <div data-mdb-input-init class="form-outline form-white mb-4">
                           <input type="password" id="password" class="form-control form-control-lg" placeholder="Password" />
-                          <!-- <label class="form-label" for="password">Password</label> -->
                         </div>
           
                         <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">Forgot password?</a></p>
@@ -94,36 +95,5 @@
               
     </div>
   </body>
-  <style>
-    .gradient-custom {
-    /* fallback for old browsers */
-    background: #6a11cb;
-
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
-
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))
-    }
-
-  </style>
-  <script>
-    function submitForm() {
-      var userid = document.getElementById("userid").value;
-      var password = document.getElementById("password").value;
-
-      fetch("/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          userid: userid,
-          password: password,
-        }),
-      })
-        .then((result) => result.json())
-        .then((data) => alert(data.msg));
-    }
-  </script>
+  <script src = "script.js"></script>
 </html>
